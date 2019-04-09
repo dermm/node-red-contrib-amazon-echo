@@ -78,7 +78,9 @@ module.exports = function(RED) {
 
             if (stateChanged){
               setDeviceAttributes(msg.payload.deviceid, msg.payload, hubNode.context());
-              payloadHandler(hubNode, msg.payload.deviceid);
+              if (config.enablecontrol) {
+			    payloadHandler(hubNode, msg.payload.deviceid);
+			  }
             }
           }
         });

@@ -8,7 +8,8 @@
                 return port > 0 && port < 65536;
               }
             },
-            enableinput: {value:false}
+            enableinput: {value:false},
+			enablecontrol: {value:false}
         },
         inputs:1,
         outputs:1,
@@ -27,6 +28,10 @@
     <div class="form-row">
         <label for="node-input-enableinput"><i class="fa fa-tag"></i> Enable Input</label>
         <input type="checkbox" id="node-input-enableinput">
+    </div>
+    <div class="form-row">
+        <label for="node-input-enablecontrol"><i class="fa fa-tag"></i> Enable Input Control</label>
+        <input type="checkbox" id="node-input-enablecontrol">
     </div>
     <div class="form-tips">
       Tips:
