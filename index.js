@@ -360,6 +360,7 @@ module.exports = function(RED) {
 
       var msg = getDeviceAttributes(deviceId, hubNode.context());
       msg.rgb = colorSHB2RGB(msg.hue, msg.sat, 254);
+      msg.percentage = Math.floor(msg.bri / 253 * 100);
       msg.payload = msg.on ? "on" : "off";
       msg.deviceid = deviceId;
       msg.topic = "";
